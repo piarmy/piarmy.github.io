@@ -37,6 +37,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -85,10 +86,15 @@ ul.links li {
   margin-left: 10px;
   margin-right: 10px;
   text-transform: none;
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 .copy {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 ul.links {
@@ -105,9 +111,11 @@ hr.star-light:after {
 }
 
 .sidebar {
-  font-size: 1em;
+  font-size: 0.9em;
   padding-top:20px;
   background-color: #efefef;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .sidebar .tutorial, .sidebar .repository {
@@ -310,9 +318,13 @@ hr.star-light:after {
             <div class="row" style="margin-top: 20px;">
                 <div class="col-lg-7 main">
                     <h2 style="margin-bottom:20px;">About</h2>
-                    <p class="text-left copy">Skateboard prism +1, hoodie air plant next level shoreditch trust fund kombucha. Microdosing cliche meditation cardigan ethical you probably haven't heard of them mixtape messenger bag PBR&B biodiesel, craft beer mumblecore mustache. Fanny pack stumptown slow-carb franzen. La croix flannel etsy, swag succulents twee crucifix jianbing health goth before they sold out next level live-edge retro chia. Synth bicycle rights palo santo, adaptogen truffaut crucifix kickstarter normcore. YOLO taiyaki tilde, farm-to-table gochujang PBR&B tacos scenester franzen slow-carb. Occupy small batch banjo pok pok, gochujang readymade flexitarian pug plaid literally kombucha vaporware sustainable palo santo.</p>
+                    <p class="text-left copy">PiArmy was started as an experiment to combine Docker and IoT, specifically on Raspberry Pis. What started out as some simple Docker images and notes has turned into more of an obsession. As the number of images and tests grew a lot of concepts and documentation was lost in the hurry to rapidly prototype, instead of deliberately take things step by step. So, in order to force myself to slow down and organize my thoughts, I decided to turn this into a public spectacle/debacle, complete with public Docker images, articles on theory and pain points, and general process documentation.</p>
 
-                    <p class="text-left copy">Echo park banh mi paleo artisan, street art umami DIY iPhone gluten-free readymade taxidermy farm-to-table live-edge organic green juice. Church-key wayfarers trust fund, kickstarter hashtag taiyaki mixtape twee. Shoreditch everyday carry fanny pack authentic pour-over squid kogi keffiyeh migas. Live-edge 90's affogato, glossier distillery street art VHS organic narwhal pork belly. 90's XOXO wolf vaporware literally, pickled slow-carb tote bag. Raclette echo park poutine ethical, live-edge cliche whatever crucifix aesthetic selfies. Fashion axe snackwave polaroid forage.</p>
+                    <p class="text-left copy">The seed for this initially started when I found myself deploying more and more IoT devices into the wild with the need to manage them remotely. In the hopes of creating a centralized administration for devices on disparate networks, PiArmy was born. Initially, with only a handful of devices, I managed everything through a centralized server utilizing Docker Swarm and a custom Ngrok server. However, this quickly became untenable while trying not only to manage the Docker Swarm itself, but then also dynamically remapping and managing all of the ports via Ngrok across different networks&mdash;some public and some behind firewalls. I quickly became lost while trying to implement different versions of overlay networks and various VPN setups&mdash;all without a deep understanding some of the basic Docker networking concepts. By piling on more and more technologies, things became worse instead of better.</p>
+
+                    <p class="text-left copy">I decided to take a step back, remove all of the networking hassles, and dig deeper into Docker concepts. So, I bought 4 Raspberry Pi 3s, a switch, and HDMI monitor and decided to start from scratch. The tutorials and images here represent a new starting point in this deeper dive. By documenting some of the basic concepts as well as some of the hurdles I had to overcome, the hope is that this might become a centralized knowledge base not only for me, but for anyone else wanting to explore the combination of Docker on the Raspberry Pi.</p>
+
+                    <p class="text-left copy">Once all of the pieces to this first puzzle are finished, the next steps include figuring out the best and most stable ways to expand the local Swarm out across different public and private networks, while still maintaining a stable and manageable army of IoT devices.</p>
                 </div>
 
                 <div class="col-lg-5 text-center sidebar">
